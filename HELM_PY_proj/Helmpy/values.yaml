@@ -1,0 +1,8 @@
+metadata:
+  namespace: pyapp
+replicaCount: 1
+
+ 
+image:
+  region: "us-east-1"
+  aws: "517056076755"
