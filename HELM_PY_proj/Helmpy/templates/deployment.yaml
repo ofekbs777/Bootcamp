@@ -16,7 +16,7 @@ spec:
       	app: python
     spec:
       imagePullSecrets:
-      
+      - name: ofekproj
       containers:
         - name: {{ .Release.Name }}
           image: 517056076755.dkr.ecr.us-east-1.amazonaws.com/ofekproj:latest
