@@ -5,6 +5,6 @@ RUN pip install flask
 EXPOSE 8080
 
 WORKDIR /app
-ADD server.py /app
+ADD app.py /app
 
-CMD python server.py
+CMD python app.py
