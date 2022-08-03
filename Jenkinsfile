@@ -24,11 +24,14 @@ pipeline {
                 checkout([$class: 'GitSCM', branches: [[name: '*/main']], extensions: [], userRemoteConfigs: [[credentialsId: '569b9009-82cc-42c6-8aa4-142148941f7f', url: 'https://github.com/ofekbs777/Bootcamp.git']]])   
             }
         }
+
   
     // Building Docker images
     stage('Building image') {
       steps{
         script {
+            
+        sh "cd HELM_PY_proj/"
           
           dockerImage = docker.build "${IMAGE_REPO_NAME}:${IMAGE_TAG}" 
         }
